@@ -1,3 +1,43 @@
+# 🛒 AI Checkout Copilot
+
+> An Elite, Context-Aware Checkout Concierge for Premium Shopify Brands.
+
+**AI Checkout Copilot** is a Shopify Checkout UI Extension that seamlessly integrates Google's Gemini 2.5 Flash into the final step of the purchasing journey. Instead of displaying static shipping rates, it dynamically analyzes the user's cart, explains the value tradeoff of shipping options, and proactively pitches highly relevant bundle upsells—all without requiring a single extra click.
+
+---
+
+## ✨ Key Features
+
+* **Proactive Tradeoff Analysis:** Replaces raw shipping costs with intelligent, context-aware reasoning (e.g., framing a $15 express fee as a smart investment to protect a $950 order).
+* **Native, Frictionless Upselling:** Analyzes live cart contents to hallucinate-free, highly relevant cross-sells (e.g., pitching pro-grade bindings when a snowboard is detected).
+* **"Wide Net" Reactive Data Parser:** Built to withstand shifting Shopify API schemas, safely traversing nested Preact signals (`.current` vs `.value`) to read live prices and item names without crashing the Web Worker sandbox.
+* **Rate-Limit Memory Cache:** Implements a localized snapshot cache to permanently bypass HTTP 429 Rate Limit errors and prevent API spam during rapid user toggling.
+* **Strict Prompt Engineering:** Enforces a conversational termination protocol (`NEVER ask a question`) ensuring the AI acts as a decisive conversion tool, not an open-ended chatbot.
+
+---
+
+## 🛠️ Architecture & Tech Stack
+
+* **Frontend:** Preact, Shopify Checkout UI Extensions API
+* **Backend Proxy:** Remix (handles CORS, prompt hydration, and secure API key injection)
+* **AI Engine:** Google Gemini 2.5 Flash (`@google/genai`)
+* **Environment:** Node.js, Shopify CLI, Cloudflare Tunnels
+
+---
+
+## 🚀 Local Setup & Installation
+
+Follow these steps to run the Copilot locally on a development store.
+
+### 1. Prerequisites
+* Node.js (v18 or higher)
+* A Shopify Partner Account with a Development Store (Checkout Extensibility enabled)
+* A Google Gemini API Key
+
+### 2. Clone the Repository
+```bash
+git clone [https://github.com/YOUR_GITHUB_USERNAME/Kasparo_Hackathon_Checkout_Copilot.git](https://github.com/YOUR_GITHUB_USERNAME/Kasparo_Hackathon_Checkout_Copilot.git)
+cd Kasparo_Hackathon_Checkout_Copilot
 # Shopify App Template - React Router
 
 This is a template for building a [Shopify app](https://shopify.dev/docs/apps/getting-started) using [React Router](https://reactrouter.com/). It was forked from the [Shopify Remix app template](https://github.com/Shopify/shopify-app-template-remix) and converted to React Router.
